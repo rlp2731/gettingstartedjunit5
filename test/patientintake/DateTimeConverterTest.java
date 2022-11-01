@@ -2,6 +2,7 @@ package patientintake;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -25,6 +26,7 @@ class DateTimeConverterTest {
                 () -> "Failed to convert 'today' string to expected date time, today passed was: " +today);
     }
     @Test
+    @Tag("dateTime")
     @DisplayName("correctly regardless of case ")
     void convertTodayStringCorrectlyCaseInsensitive(){
         LocalDate today = LocalDate.of(2022,11,1);
